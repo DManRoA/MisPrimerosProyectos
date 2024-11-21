@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearTech</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.jpg">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+    <!-- Navegacion -->
+    <nav class="navbar navbar-expand-lg pt-2" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" alt="GearTech">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#autopartes">Autopartes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conocenos">Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion">Ubicanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ofertas especiales</a></li>
+                            <li><a class="dropdown-item" href="#">Catalogo para motos</a></li>
+                            <li><a class="dropdown-item" href="#">Soporte al cliente</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navegatcion Fin -->
+
+    <!-- Seccion Carrusel -->
+    <section id="seccion-carrusel" class="seccionCar pb-5">
+        <div class="container-md">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img class="img-fluid" src="images/tuning.webp" alt="...">
+                        <div class="blur"></div>
+                        <p class="texto p-2 w-100 text-center">Tuneamos tu vehiculo</p>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img class="img-fluid" src="images/mechanic.jpg" alt="...">
+                        <div class="blur"></div>
+                        <p class="texto p-2 w-100 text-center">Servicio Automotriz con los Mejores Mecánicos del País.
+                        </p>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img class="img-fluid" src="images/parts.jpg" alt="...">
+                        <div class="blur"></div>
+                        <p class="texto p-2 w-100 text-center">Piezas de alta calidad y duraderas</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Fin seccion carrusel -->
+
+    <section class="contenedor-imagen">
+        <img class="w-100" src="images/superauto.jpg" alt="">
+    </section>
+
+    <!-- Seccion Autpartes -->
+    <section id="catalogo" class="catalogo p-5">
+        <div class="container">
+            <h2 class="text-center pb-4">CATÁLOGO DE AUTOPARTES <i class="bi bi-bag-fill"></i></h2>
+            <div class="row row-col-2 row-cols-md-3 g-4">
+                <!-- row-col-2 lo que hace es mostrar dos elementos en pantallas cercanas a moviles y row-cols-md3 los organiza en tres en pantallas medianas a mas grande. Se organizan los elementos similar a una cuadricula GRID sin especificar GRID -->
+                <!-- Producto 1 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/spoiler.png" class="card-img-top img-fluid" alt="Aleron de Fibra de Carbono">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Aleron de Fibra de Carbono</h5>
+                            <p class="card-text">Un alerón resistente y liviano, ideal para mejorar el rendimiento.</p>
+                        </div>
+                        <div class="card-footer text-white border-0">
+                            <small>Precio: $120 | Precio Online: $100</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/turbokit.jpg" class="card-img-top img-fluid" alt="Turbo para Mitsubishi L200">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Turbo para Mitsubishi L200</h5>
+                            <p class="card-text">Aumenta la potencia de tu vehículo con este turbo de alta calidad.</p>
+                        </div>
+                        <div class="card-footer text-white">
+                            <small>Precio: $145 | Precio Online: $130</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/supercharger.jpg" class="card-img-top img-fluid" alt="Supercargador">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Supercargador Magnuson Tundra y Roraima</h5>
+                            <p class="card-text">Maximiza el rendimiento de tu motor con este supercargador.</p>
+                        </div>
+                        <div class="card-footer text-white">
+                            <small>Precio: $230 | Precio Online: $210</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/llantaAI.png" class="card-img-top img-fluid" alt="Aleron de Fibra de Carbono">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Aleron de Fibra de Carbono</h5>
+                            <p class="card-text">Un alerón resistente y liviano, ideal para mejorar el rendimiento.</p>
+                        </div>
+                        <div class="card-footer text-white">
+                            <small>Precio: $120 | Precio Online: $100</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/faros.jpg" class="card-img-top img-fluid" alt="Turbo para Mitsubishi L200">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Turbo para Mitsubishi L200</h5>
+                            <p class="card-text">Aumenta la potencia de tu vehículo con este turbo de alta calidad.</p>
+                        </div>
+                        <div class="card-footer text-white">
+                            <small>Precio: $145 | Precio Online: $130</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 666 -->
+                <div class="col">
+                    <div class="card h-100 border-5">
+                        <img src="images/brake.jpg" class="card-img-top img-fluid" alt="Supercargador">
+                        <div class="card-body text-white">
+                            <h5 class="card-title">Supercargador Magnuson Tundra y Roraima</h5>
+                            <p class="card-text">Maximiza el rendimiento de tu motor con este supercargador.</p>
+                        </div>
+                        <div class="card-footer text-white">
+                            <small>Precio: $230 | Precio Online: $210</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Productos adicionales (4, 5 y 6) -->
+                <!-- Repite el mismo formato de tarjeta para los siguientes productos -->
+            </div>
+        </div>
+    </section>
+    <!-- Fin seccion autopartes -->
+
+    <section class="contenedor-imagen">
+        <img class="w-100" src="images/superauto3.jpg" alt="">
+    </section>
+
+    <!-- Seccion Conocenos -->
+    <section id="conocenos" class="pb-5 pt-5">
+        <div class="container-fluid mx-0">
+            <!-- cuando uso container-fluid aqui le estoy diciendo al div container que tome todo el ancho disponible de su div padre, de esta manera se aprovecha el espacio que sobra al eliminar los margenes que se hizo en el div padre -->
+            <div class="row">
+                <div
+                    class=" text-white somos col-6 p-5 d-flex flex-column gap-5 align-items-center justify-content-center">
+                    <h2 class="titulo pb-3 fs-3 pl-3 pr-3">¿Quienes Somos?</h2>
+                    <p class="descripcion text-center">
+                        En GearTech, nos apasiona mantener a tus vehículos en su mejor estado. Desde nuestra fundación,
+                        nos hemos comprometido a ser el proveedor líder de autopartes en Perú, ofreciendo productos de
+                        alta calidad y un servicio excepcional. Nuestro enfoque se centra en satisfacer las necesidades
+                        de nuestros clientes, brindando soluciones confiables y duraderas para vehículos de todas las
+                        marcas. Con sucursales estratégicamente ubicadas en todo el país y un equipo experto, estamos
+                        aquí para asegurarnos de que encuentres exactamente lo que necesitas para mantener tu auto
+                        funcionando al máximo rendimiento. En GearTech, la confianza y la innovación nos impulsan a
+                        seguir avanzando contigo.
+                    </p>
+                </div>
+                <div class="tiendas-carrusel col-6 pt-5 pb-5 d-flex align-items-center justify-content-center">
+                    <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img class="img-fluid rounded-3" src="images/tiendaLima.png" alt="...">
+                                <div class="blur"></div>
+                                <p class="texto p-2 w-100 text-center">Lima
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img class="img-fluid rounded-3" src="images/tiendaCuzco.png" alt="...">
+                                <div class="blur"></div>
+                                <p class="texto p-2 w-100 text-center">Cusco
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img class="img-fluid rounded-3" src="images/tiendaTrujillo.png" alt="...">
+                                <div class="blur"></div>
+                                <p class="texto p-2 w-100 text-center">Trujillo
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img class="img-fluid rounded-3" src="images/tiendaPiura.png" alt="...">
+                                <div class="blur"></div>
+                                <p class="texto p-2 w-100 text-center">Piura
+                                </p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin seccion Conocenos -->
+
+    <section class="contenedor-imagen">
+        <img class="w-100" src="images/bmwm3.jpg" alt="">
+    </section>
+
+    <!-- Seccion ubicanos -->
+    <section id="ubicacion" class="ubicanos">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Datos de direccion -->
+                <div class="col-md d-flex flex-column align-items-center justify-content-center">
+                    <h2 class="tittle text-center fs-1">
+                        Ubicanos <i class="bi bi-geo-alt-fill"></i>
+                    </h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item fs-5">
+                            <span class="fw-bold">Lima</span>: Av. Los Ingenieros 456, San Martín de Porres. Tel: +51
+                            987 654 321
+                        </li>
+                        <li class="list-group-item fs-5">
+                            <span class="fw-bold">Piura</span>: Calle Comercio 123, Centro. Tel: +51 912 345 678
+                        </li>
+                        <li class="list-group-item fs-5">
+                            <span class="fw-bold">Trujillo</span>: Av. Larco 890, Urbanización Primavera. Tel: +51 965
+                            432 198
+                        </li>
+                        <li class="list-group-item fs-5">
+                            <span class="fw-bold">Cusco</span>: Calle Arco Iris 789, Centro Histórico. Tel: +51 978 123
+                            456
+                        </li>
+                    </ul>
+                </div>
+                <!-- Ubicacion en mapa -->
+                <div class="col-md">
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor-imagen">
+        <img class="w-100" src="images/bmwmodels.jpg" alt="">
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-1">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 pb-5 d-flex flex-column justify-content-center align-items-center">
+                        <img class="rounded-circle" src="images/logo.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex flex-column align-items-center">
+                        <h4 class="pb-3">Teléfonos <i class="bi bi-telephone"></i></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0"><span class="fw-bold">Lima:</span> +51 989 525 444</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Trujillo:</span> +51 911 234 558</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Cusco:</span> +51 969 454 782</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Piura:</span> +51 998 892 648</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="pb-3">Correos <i class="bi bi-envelope-fill"></i></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0"><span class="fw-bold">Lima:</span> limainfo@geartech.com</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Trujillo:</span>Trujillo: trujinfo@geartech.com</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Cusco:</span> cuscoinfo@geartech.com</li>
+                            <li class="list-group-item border-0"><span class="fw-bold">Piura:</span> piurainfo@geartech.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex flex-column align-items-center">
+                        <h4 class="pb-3">Información <i class="bi bi-info-circle"></i></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item border-0"><a class="text-reset text-decoration-none" href="Aviso Legal">Aviso Legal</a></li>
+                            <li class="list-group-item border-0"><a class="text-reset text-decoration-none" href="faq">FAQ</a></li>
+                            <li class="list-group-item border-0"><a class="text-reset text-decoration-none" href="politica">Politica de Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2 bg-black p-3">
+            <div class="container text-white">
+                <div class="row">
+                    <div class="redes col">Nuestras redes sociales</div>
+                    <div class="iconos col d-flex justify-content-end">
+                        <a href="twitter">
+                            <i class="bi bi-twitter text-info me-3"></i>
+                        </a>
+                        <a href="facebook">
+                            <i class="bi bi-facebook text-primary me-3"></i>
+                        </a>
+                        <a href="linkedin">
+                            <i class="bi bi-linkedin text-primary me-3"></i>
+                        </a>
+                        <a href="instagram">
+                            <i class="bi bi-instagram text-warning me-3"></i>
+                        </a>
+                        <a href="youtube">
+                            <i class="bi bi-youtube text-danger me-3"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+    <script>
+        //Se inicializa el mapa y se establece el punto central con las coordenadas en la siguiente linea y un nivel de zoom con el numero 5
+        const map = L.map('map').setView([-9.189967, -75.015152], 5);
+
+        //
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const locations = [
+            {
+                coords: [-12.0185, -77.0689],
+                popup: "<b>Lima</b><br>Av. Los Ingenieros 456, San Martin de Porres."
+            },
+            {
+                coords: [-5.1945, -80.6328],
+                popup: "<b>Piura</b><br>Calle Comercio 123, Centro."
+            },
+            {
+                coords: [-8.1212, -79.0255],
+                popup: "<b>Trujillo</b><br>Av. Larco 890, Urbanización Primavera."
+            },
+            {
+                coords: [-13.5183, -71.9781],
+                popup: "<b>Cusco</b><br>Calle Arco Iris 789, Centro Histórico."
+            }
+        ];
+        //Agegar marcadores que se mostraran en el mapa
+        locations.forEach(location => {
+            const marker = L.marker(location.coords).addTo(map);
+            marker.bindPopup(location.popup);
+        });
+    </script>
+
+</body>
+
+</html>
